@@ -138,7 +138,8 @@ int main() //Função principal
     	printf("Selecione a opção desejada:\n\n"); //Se comunica com o usuário
     	printf("\t1 - Registrar alunos\n"); //Se comunica com o usuário
     	printf("\t2 - Consultar alunos\n"); //Se comunica com o usuário
-    	printf("\t3 -  Deletar alunos\n\n"); //Se comunica com o usuário
+    	printf("\t3 - Deletar alunos\n"); //Se comunica com o usuário
+    	printf("\t4 - Sair do sistema\n\n"); //Se comunica com o usuário
     	printf("Opção:");  //Se comunica com o usuário
 		//Final do menu
 	
@@ -160,6 +161,11 @@ int main() //Função principal
 	    	case 3: //caso aplicar determinada variável
 	        deletar(); //chamada de função
     		break; //fecha o caso
+    		
+    		case 4: //caso aplicar determinada variável
+    		printf("Obrigado por utilizar o sistema!\n\n");
+    		return 0;
+    		break;
     		
     		default: //Comando caso a variável digitada não seja nenhuma das opções acima
     		printf("###Essa opção não é válida###\n"); //Se comunica com o usuário
