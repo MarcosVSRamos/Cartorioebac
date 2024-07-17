@@ -163,8 +163,8 @@ int main() //Função principal
     		break; //fecha o caso
     		
     		case 4: //caso aplicar determinada variável
-    		printf("Obrigado por utilizar o sistema!\n\n");
-    		return 0;
+    		printf("Obrigado por utilizar o sistema!\n\n"); //Se comunica com o usuário
+    		return 0;  //queba laço e sai do sistema
     		break;
     		
     		default: //Comando caso a variável digitada não seja nenhuma das opções acima
