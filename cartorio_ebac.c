@@ -126,52 +126,68 @@ int main() //Função principal
 {
 	int opcao=0; //Definindo variáveis do tipo inteira
     int laco=1;	 //Definindo variáveis do tipo inteira
+    char senhadigitada[10]="a"; //Definindo variáveis do tipo char
     
-	for(laco=1;laco=1;) //comando de comparação
-	{
-		system("cls"); //limpa a tela
-					
-	setlocale(LC_ALL, "Portuguese"); //Definindo lijguagens
-	    
-	    //Inicio do menu
-	    printf("### Registro geral de alunos da EBAC ####\n\n"); //Se comunica com o usuário
-    	printf("Selecione a opção desejada:\n\n"); //Se comunica com o usuário
-    	printf("\t1 - Registrar alunos\n"); //Se comunica com o usuário
-    	printf("\t2 - Consultar alunos\n"); //Se comunica com o usuário
-    	printf("\t3 - Deletar alunos\n"); //Se comunica com o usuário
-    	printf("\t4 - Sair do sistema\n\n"); //Se comunica com o usuário
-    	printf("Opção:");  //Se comunica com o usuário
-		//Final do menu
+    printf("### Registro geral de alunos da EBAC ####\n\n"); //Se comunica com o usuário
+    printf("Login de administrador!\n\nDigite sua senha: "); //Se comunica com o usuário
+    scanf("%s",senhadigitada); //Armazena a senha digitada na variável
+    
+    system("cls"); //limpa a tela
+    
+    if(senhadigitada[10] == "admin") //Comando se a variável estiver correta
+    {
+    	
 	
-    	scanf("%d", &opcao); //Armazenando a escolha do usuário (O "%d" se refere às variáveis inteiras
-	
-        system("cls"); //Comando para limpar a tela
-        
-        
-		switch(opcao) //comando de múltiplas escolhas "switchcase"
+    
+		for(laco=1;laco=1;) //comando de comparação
 		{
-			//início do menu de seleções
-			case 1: //caso aplicar determinada variável
-			registro(); //chamada de função
-	     	break; //fecha o caso
-	     	case 2: //caso aplicar determinada variável
-			consulta(); //chamada de função
-	    	break; //fecha o caso
-	    	
-	    	case 3: //caso aplicar determinada variável
-	        deletar(); //chamada de função
-    		break; //fecha o caso
-    		
-    		case 4: //caso aplicar determinada variável
-    		printf("Obrigado por utilizar o sistema!\n\n"); //Se comunica com o usuário
-    		return 0;  //queba laço e sai do sistema
-    		break;
-    		
-    		default: //Comando caso a variável digitada não seja nenhuma das opções acima
-    		printf("###Essa opção não é válida###\n"); //Se comunica com o usuário
-    		system("pause"); //só avança se clicar qualquer tecla
-    		break; //fecha o caso
-		}
-}
+			system("cls"); //limpa a tela
+					
+			setlocale(LC_ALL, "Portuguese"); //Definindo lijguagens
+	    
+		    //Inicio do menu
+		    printf("### Registro geral de alunos da EBAC ####\n\n"); //Se comunica com o usuário
+  		  	printf("Selecione a opção desejada:\n\n"); //Se comunica com o usuário
+    		printf("\t1 - Registrar alunos\n"); //Se comunica com o usuário
+    		printf("\t2 - Consultar alunos\n"); //Se comunica com o usuário
+    		printf("\t3 - Deletar alunos\n"); //Se comunica com o usuário
+    		printf("\t4 - Sair do sistema\n\n"); //Se comunica com o usuário
+    		printf("Opção:");  //Se comunica com o usuário
+			//Final do menu
 	
+    		scanf("%d", &opcao); //Armazenando a escolha do usuário (O "%d" se refere às variáveis inteiras
+	
+     	  	system("cls"); //Comando para limpar a tela
+        
+        
+			switch(opcao) //comando de múltiplas escolhas "switchcase"
+			{
+				//início do menu de seleções
+				case 1: //caso aplicar determinada variável
+				registro(); //chamada de função
+	 	    	break; //fecha o caso
+		     	case 2: //caso aplicar determinada variável
+				consulta(); //chamada de função
+	  		  	break; //fecha o caso
+	 	   	
+	    		case 3: //caso aplicar determinada variável
+	     	   deletar(); //chamada de função
+    			break; //fecha o caso
+    		
+    			case 4: //caso aplicar determinada variável
+    			printf("Obrigado por utilizar o sistema!\n\n"); //Se comunica com o usuário
+    			return 0;  //queba laço e sai do sistema
+    			break;
+    		
+    			default: //Comando caso a variável digitada não seja nenhuma das opções acima
+    			printf("###Essa opção não é válida###\n"); //Se comunica com o usuário
+    			system("pause"); //só avança se clicar qualquer tecla
+    			break; //fecha o caso
+			}
+		}
+    }
+    
+    else  //Comando caso a senha estiver incorreta
+		printf("Senha incorreta!"); //Se comunica com o usuário
+		
 }
