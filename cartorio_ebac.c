@@ -127,14 +127,17 @@ int main() //Função principal
 	int opcao=0; //Definindo variáveis do tipo inteira
     int laco=1;	 //Definindo variáveis do tipo inteira
     char senhadigitada[10]="a"; //Definindo variáveis do tipo char
+    int comparacao; //Definindo variáveis do tipo char
     
     printf("### Registro geral de alunos da EBAC ####\n\n"); //Se comunica com o usuário
     printf("Login de administrador!\n\nDigite sua senha: "); //Se comunica com o usuário
     scanf("%s",senhadigitada); //Armazena a senha digitada na variável
     
+    comparacao = strcmp(senhadigitada, "admin");
+    
     system("cls"); //limpa a tela
     
-    if(senhadigitada[10] == "admin") //Comando se a variável estiver correta
+    if(comparacao == 0) //Comando se a variável estiver correta
     {
     	
 	
